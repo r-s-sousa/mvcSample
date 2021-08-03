@@ -1,0 +1,24 @@
+{
+    "name": "rafael/modelo",
+    "description": "Modelo de projeto para adiantar codifica\u0000\u0000o",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael",
+            "email": "rafael_sousa2018@outlook.com"
+        }
+    ],
+    "require": {
+        "coffeecode/router": "^1.0",
+        "php-activerecord/php-activerecord": "^1.2",
+        "league/plates": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\" : "Source"
+        },
+        "files": [
+            "Source/config.php"
+        ]
+    }
+}
