@@ -1,24 +1,33 @@
 <?php
 
+// MOSTRA OS ERROS
 ini_set('display_errors', "1");
+
+// INLCUI A CLASSE ROUTER
+use CoffeeCode\Router\Router;
 
 // INCLUI O AUTOLOAD
 require __DIR__."/vendor/autoload.php";
 
-// usa o autoload
-use CoffeeCode\Router\Router;
-use Source\Migrations\Migrations;
-
-// preenche a tabela de produtos
-// Migrations::fillTbProdutos(10);
-
 // NOVO OBJ DO TIPO ROUTER
 $router = new Router(URL);
 
+// DEFINE O NAMESPACE DOS CONTROLADORES
+$router->namespace("Source\Controllers");
 
+// 
+// BASE PAGE
+// 
+$router->group(null);
+$router->get("/", "Web:home", "web.home");
+$router->get("/sobre", "Web:about", "web.about");
 
-// ADICIONA AS ROTAS INCIAIS
-include_once __DIR__."/Source/Routes/main.php";
+// 
+// ERRORS
+// 
+$router->group("error")->namespace("Source\App");
+$router->get("/{errcode}", "Error:error", "error.error");
+
 
 // EXECUTA AS ROTAS
 $router->dispatch();

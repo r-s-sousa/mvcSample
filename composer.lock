@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "151b293542f13755a16fb2e07fbe65aa",
+    "content-hash": "f0d130859f38012cf575e7bf17fae9bf",
     "packages": [
         {
             "name": "coffeecode/router",
@@ -49,6 +49,10 @@
                 "routes",
                 "upinside"
             ],
+            "support": {
+                "issues": "https://github.com/robsonvleite/router/issues",
+                "source": "https://github.com/robsonvleite/router/tree/1.0.8"
+            },
             "time": "2021-03-21T18:45:16+00:00"
         },
         {
@@ -109,6 +113,10 @@
                 "templating",
                 "views"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/plates/issues",
+                "source": "https://github.com/thephpleague/plates/tree/v3.4.0"
+            },
             "time": "2020-12-25T05:00:37+00:00"
         },
         {
@@ -149,6 +157,10 @@
                 "activerecord",
                 "orm"
             ],
+            "support": {
+                "issues": "https://github.com/jpfuentes2/php-activerecord/issues",
+                "source": "https://github.com/jpfuentes2/php-activerecord/tree/master"
+            },
             "time": "2017-06-11T22:05:37+00:00"
         }
     ],
@@ -160,5 +172,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

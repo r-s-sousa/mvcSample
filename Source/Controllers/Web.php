@@ -1,27 +1,25 @@
 <?php
 
-namespace Source\App;
+namespace Source\Controllers;
 
 // ENGINE PLATES
 
 use CoffeeCode\Router\Router;
 use League\Plates\Engine;
-use Source\Models\ContactDao;
 
 /**
  * Controlador das rotas iniciais
  */
-class Web
+class Web extends Controller
 {
     /**
-     * Objeto responsável por renderizar a view
-     * @var Engine
+     * Construtor do controlador Web
+     *
+     * @param Router $router
      */
-    private $view;
-
-    public function __construct()
+    public function __construct($router)
     {
-        $this->view = new Engine(dirname(__DIR__, 2) . "/themes/main");
+        parent::__construct($router);
     }
 
     /**
@@ -31,7 +29,7 @@ class Web
      */
     public function home()
     {
-        echo $this->view->render('home', [
+        echo $this->view->render('main/home', [
             'title' => "HOME | " . SITE,
         ]);
     }
@@ -43,7 +41,7 @@ class Web
      */
     public function about()
     {
-        echo $this->view->render('about', [
+        echo $this->view->render('main/about', [
             'title' => "Sobre | " . SITE
         ]);
     }

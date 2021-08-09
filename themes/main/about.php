@@ -1,13 +1,19 @@
 <?php $this->layout("_theme", ['title' => $title]); ?>
 
-<h1>Página Sobre</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Página Sobre</h1>
+        </div>
+    </div>
+</div>
 
 <?php
 $this->start('scripts');
 ?>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
         document.getElementById('about').classList.add('active');
     })
 </script>

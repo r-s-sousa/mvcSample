@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\App;
+namespace Source\Controllers;
 
 // Engine blade
 use League\Plates\Engine;

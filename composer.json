@@ -1,6 +1,6 @@
 {
-    "name": "rafael/modelo",
-    "description": "Modelo de projeto para adiantar codifica\u0000\u0000o",
+    "name": "rafael/samplemvc",
+    "description": "Modelo de projeto para adiantar codificação",
     "license": "MIT",
     "authors": [
         {
@@ -15,10 +15,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Source\\" : "Source"
+            "Source\\" : "source"
         },
         "files": [
-            "Source/config.php"
+            "source/Config.php",
+            "source/Helpers.php"
         ]
     }
 }
