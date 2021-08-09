@@ -18,8 +18,8 @@
             "Source\\" : "source"
         },
         "files": [
-            "source/Config.php",
-            "source/Helpers.php"
+            "source/config.php",
+            "source/helpers.php"
         ]
     }
 }
