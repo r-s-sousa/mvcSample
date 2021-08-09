@@ -7,7 +7,7 @@ ini_set('display_errors', "1");
 use CoffeeCode\Router\Router;
 
 // INCLUI O AUTOLOAD
-require __DIR__."/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
 // NOVO OBJ DO TIPO ROUTER
 $router = new Router(URL);
@@ -25,7 +25,7 @@ $router->get("/sobre", "Web:about", "web.about");
 // 
 // ERRORS
 // 
-$router->group("error")->namespace("Source\App");
+$router->group("error");
 $router->get("/{errcode}", "Error:error", "error.error");
 
 
@@ -34,5 +34,5 @@ $router->dispatch();
 
 // REDIRECIONA TODOS ERROS
 if ($router->error()) {
-    $router->redirect("/error/{$router->error()}");
+    $router->redirect('error.error', ['errcode' => $router->error()]);
 }

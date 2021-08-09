@@ -8,20 +8,11 @@ use League\Plates\Engine;
 /**
  * Classe responsável por gerir erros de rotas
  */
-class Error
+class Error extends Controller
 {
-    /**
-     * Objeto responsável por renderizar a view
-     * @var Engine
-     */
-    private $view;
-
-    /**
-     * Método construtor da visão
-     */
-    public function __construct() 
+    public function __construct($router) 
     {
-        $this->view = new Engine(dirname(__DIR__,2)."/themes/main");
+        parent::__construct($router);
     }
 
     /**
@@ -31,7 +22,7 @@ class Error
      */
     public function Error($data)
     {
-        echo $this->view->render("error", [
+        echo $this->view->render("main/error", [
             'title' => "Error {$data['errcode']} | ".SITE,
             'error' => $data['errcode']
         ]);
