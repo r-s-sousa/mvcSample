@@ -46,3 +46,28 @@ function asset($path)
 {
    return URL . "/themes/assets/{$path}";
 }
+
+/**
+ * Adiciona na sessão uma chave com a mensagem a ser apresentar
+ *
+ * @param string $type
+ * @param string $message
+ * @return void
+ */
+function setMessage($type, $message)
+{
+   // Inicia a sessão
+   if (!isset($_SESSION)) session_start();
+
+   // Muda a sessão em si
+   switch ($type) {
+      case "sucesso":
+         $_SESSION['mensagem'] = $message;
+         break;
+      case "error":
+         $_SESSION['error'] = $message;
+         break;
+      default:
+         break;
+   }
+}

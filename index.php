@@ -3,6 +3,9 @@
 // MOSTRA OS ERROS
 ini_set('display_errors', "1");
 
+// INICIA A SESSÃO
+session_start();
+
 // INLCUI A CLASSE ROUTER
 use CoffeeCode\Router\Router;
 
@@ -15,24 +18,14 @@ $router = new Router(URL);
 // DEFINE O NAMESPACE DOS CONTROLADORES
 $router->namespace("Source\Controllers");
 
-// 
 // BASE PAGE
-// 
-$router->group(null);
-$router->get("/", "Web:home", "web.home");
-$router->get("/sobre", "Web:about", "web.about");
+require_once __DIR__ . "/source/Routes/web_routes.php";
 
-// 
 // ERRORS
-// 
-$router->group("error");
-$router->get("/{errcode}", "Error:error", "error.error");
-
+require_once __DIR__ . "/source/Routes/error_routes.php";
 
 // EXECUTA AS ROTAS
 $router->dispatch();
 
 // REDIRECIONA TODOS ERROS
-if ($router->error()) {
-    $router->redirect('error.error', ['errcode' => $router->error()]);
-}
+if ($router->error()) $router->redirect('error.error', ['errcode' => $router->error()]);

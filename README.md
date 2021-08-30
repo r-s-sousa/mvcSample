@@ -13,3 +13,4 @@
 - Composer autoload namespace e arquivos
 - Config file
 - Helpers file
+- Sessão global
