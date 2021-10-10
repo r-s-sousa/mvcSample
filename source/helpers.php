@@ -44,7 +44,7 @@ function url($url = "")
  */
 function asset($path)
 {
-   return URL . "/themes/assets/{$path}";
+   return URL . "/assets/{$path}";
 }
 
 /**
