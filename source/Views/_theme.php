@@ -9,11 +9,8 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="<?= asset("imgs/fav.png"); ?>" type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= asset("vendor/css/bootstrap.min.css"); ?>">
-
-    <!-- MEU ESTILO -->
-    <link rel="stylesheet" href="<?= asset("css/style.css"); ?>">
+    <!-- Todos CSS minified -->
+    <link rel="stylesheet" href="<?= asset("vendor/minify/style.css"); ?>">
 
     <!-- TITULO -->
     <title><?= $title ?></title>
@@ -50,12 +47,8 @@
 
     </footer>
 
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="<?= asset('vendor/js/jquery-3.6.0.min.js'); ?>"></script>
-    <script src="<?= asset('vendor/js/bootstrap.bundle.min.js'); ?>"></script>
-
-    <!-- SCRIPT PRINCIPAL -->
-    <script src="<?= asset('js/scripts.js'); ?>"></script>
+    <!-- Todos JS minified -->
+    <script src="<?= asset("vendor/minify/scripts.js"); ?>"></script>
 
     <!-- OUTROS SCRIPTS -->
     <?= $this->section('scripts'); ?>
