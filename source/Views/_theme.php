@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="<?= asset("imgs/fav.png") ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= asset("imgs/fav.png"); ?>" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= asset("css/bootstrap.min.css") ?>">
+    <link rel="stylesheet" href="<?= asset("vendor/css/bootstrap.min.css"); ?>">
 
     <!-- MEU ESTILO -->
-    <link rel="stylesheet" href="<?= asset("css/style.css") ?>">
+    <link rel="stylesheet" href="<?= asset("css/style.css"); ?>">
 
     <!-- TITULO -->
     <title><?= $title ?></title>
@@ -21,17 +21,17 @@
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="<?= $router->route("web.home") ?>">MVC Sample</a>
+        <a class="navbar-brand" href="<?= $router->route("web.home"); ?>">MVC Sample</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="home">
-                    <a class="nav-link" href="<?= $router->route("web.home") ?>">Home</a>
+                    <a class="nav-link" href="<?= $router->route("web.home"); ?>">Home</a>
                 </li>
                 <li class="nav-item" id="about">
-                    <a class="nav-link" href="<?= $router->route("web.about") ?>">Sobre</a>
+                    <a class="nav-link" href="<?= $router->route("web.about"); ?>">Sobre</a>
                 </li>
             </ul>
         </div>
@@ -51,8 +51,11 @@
     </footer>
 
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="<?= asset('js/jquery-3.6.0.min.js') ?>"></script>
-    <script src="<?= asset('js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= asset('vendor/js/jquery-3.6.0.min.js'); ?>"></script>
+    <script src="<?= asset('vendor/js/bootstrap.bundle.min.js'); ?>"></script>
+
+    <!-- SCRIPT PRINCIPAL -->
+    <script src="<?= asset('js/scripts.js'); ?>"></script>
 
     <!-- OUTROS SCRIPTS -->
     <?= $this->section('scripts'); ?>
